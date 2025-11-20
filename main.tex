@@ -1,0 +1,175 @@
+\documentclass[a4paper]{IEEEtran}
+
+%If you have questions to IEEE-Style see
+%http://texdoc.net/texmf-dist/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage[cmex10]{amsmath}
+\usepackage{tabularx}
+\interdisplaylinepenalty=2500
+
+
+\usepackage{cite}
+\usepackage[pdftex]{graphicx}
+\graphicspath{{./graphics/}}
+\DeclareGraphicsExtensions{.pdf,.png}
+
+\usepackage{algorithmic}
+\usepackage{stfloats}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+\usepackage{csquotes}
+
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\usepackage{fixltx2e}
+\usepackage[hidelinks]{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Person-related data
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\markboth{OVGU, ComSys, Prof.~Güneş, Seminar, WS 2018}{Title}
+\title{Self-X capalitites in future Networks}
+\author{Nils Winterstein\\
+Seminar Hot Topics in Communication Systems and Internet of Things\\
+Communciation and Networked Systems (ComSys)\\
+Institute of Computer Science}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\shorthandoff{"}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Begin of document
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstract}
+\end{abstract}
+
+
+%%------Main Part ------%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+The increasing complexity of networks requires mechanisms for autonomous control and optimization. Especially in 6G networks, the need for scalability and efficiency is increasing rapidly (Q1). Various self-organizing networks (SON) in 5G networks incorporate approaches for self-optimization but encounted problems in the process (Q2). In modern 6G networks, research is being conducted into the implementation of so-called Self-X capabilities (e.g., self-configuration, self-optimization, self-healing), which are implemented through AI algorithms. 
+
+The objective of this work is to investigate the implementation of these Self-X capabilities in order to optimize the quality of service (QoS).
+
+
+\section{Theoretical Background}
+
+\subsection{Self-X Functions}
+The term Self-X encompasses three functions: Self-configuration, Self-optimization, Self-healing (Q2)
+\begin{itemize}
+  \item \textbf{Self-Configuration:}  The system configures itself and automatically optimizes its settings.
+  
+  \item \textbf{Self-Optimization:} The system automatically improves its network performance through efficient use of resources. This includes the even distribution of users across neighboring cells to avoid overloading individual cells (Load Ballencing) and  automatic redirection in case of overload (Forced Handover). It also includes energy-saving functions for inactive cells and increasing the system's capacity through efficient energy use.
+  Coveragfe Extension, Capacity Optimization
+  
+   \item \textbf{Self-Healing:} The system detects errors (e.g., failed cells) and automatically corrects them. It encompasses two core mechanisms: outage detection and cell outage compensation.  Outage detection describes the ability of the network to identify problems such as signal loss, degraded network performance or a complete cell failure. Cell outage compensation refers to the networks response to such failures in which neighbouring cells automatically adjust their parameters (e.g. recource allocation, transmission power) to cover the affected area. 
+
+\end{itemize}  
+
+
+\subsection{AI in Self-X Networks}
+
+
+verschiedene Arten von AI in 6G integriert. 
+
+Furthermore, digital twins play a fundamental role. A digital twin can be defined as a "real-time [replica] of physical networks" (Q5). These systems enable the simulation of scenarios and the design of solutions for them, which can be used to train AI algorithms and increase their predictive capabilities.
+
+\subsection{QoS}
+QoS describes how well a communication service behaves from the user’s perspective, based on a set of measurable performance properties that indicate whether the service can meet user requirements (Q6). Typical QoS-Parameter are latency, Jitter, Throughput, availibility and packet loss. 
+
+Mit 6G netzwerken steigt die Anforderungen um QoS zu garantieren signifikant. Self-X helfen. 
+
+
+
+
+\section{Self-X Functions and Architecture in future 6G Networks}
+
+\subsection{Self-Configuration}
+Self-configuration describes the ability of self-organising networks to automatically configure new elements (e.g. new network nodes) without human intervention (Q2). 
+
+-------------Warum es in 6G wichtig ist ---------------
+
+
+\textbf{contribution of AI methods: }.
+\begin{itemize}
+  \item \textbf{Deep Learning:} 
+    Deep learning algorithms help with the correct transmission and the effective transmission of signals (modelling and demodelling). Moreover  they are utilized to predict network traffic, which leads to reduced congestion and increased throughput in the network (Q3)
+    \item \textbf{Federated Learning:}
+      Federated learning allows edge devices such as smartphones and  IoT devices to train models locally and only share  the results with a server, ensuring data privacy and reducing network load (Q3).
+
+\end{itemize}  
+
+
+\subsection{Self-Optimization}
+Self-optimization defines the continuous, automatic adjustment of the network to improve performance, interference management, resource allocation, and energy consumption (Q2). Due to the high number of users, the multitude of device types, and the ever-increasing data load, the use of AI algorithms for optimization is becoming increasingly important in order to ensure QoS, as conventional algorithms are reaching their limits (quelle ???)
+ \textbf{contribution of AI methods: }
+\begin{itemize}
+    \item \textbf{evolutionary algorithm:}
+     Evolutionary algorithms are used for parameter-optimizing problems, optimizing the energy consuption of the network by finding efficient configurations for rescource allocation, power control and user scheduling. 
+    \item \textbf{Deep Learning:}
+    Deep Learning Algortihms get used for the analyse of historical data to outline auftretende Patterns as Traffic Hotspots or User Activity. Based on this they suggest actions for a better recource management, leading to more stable Latenz and a higher datenverkehr in the network. Supervised learning is used in particular for deterministic tasks such as handover optimization, while unsupervised learning is used for dynamic, constantly changing processes such as channel allocation and user association (Q3)
+    
+    \item \textbf{Swarm Intelligence: } 
+        Swarm intelligence is used to   optimise data traffic within the network. Each cell observes the actions of its neighbours and adjusts its behaviour accordingly.  
+        Example: There is too much data traffic and congestion at one point in the network. The affected cells then redirect the data traffic. The neighboring cells of the affected cells recognise this behavior and no longer forward incoming data to them.     This behaviour then occurs iteratively across the entire network. Swarm intelligence optimises network traffic, routing and forwarding, and illustrates Forced Handover and Load Balancing, helping to maintain QoS even under heavy network load.
+    
+    \item \textbf{Federated Learning:}
+        Federated Learning is used to optimize multiple cells in the network. Each cell trains a local model and only sends the model updates to a central server.This approach has the advantage that sensitive data does not need to be centralized, which improves data security and supports QoS requirements related to privacy. Moreover, because the data remains local and only updates are transmitted, the overall traffic in the network is reduced. This helps to maintain QoS  by preventing unnecessary congestion and ensuring lower latency for critical services (Q3).
+        Furthermore, this approach allows many cells to train locally at the same time instead of processing all data centrally and sequentially. Different cells can be optimized in parallel, which increases the efficiency of the optimization process and helps maintain QoS because the network can react faster to local changes. 
+
+\end{itemize} 
+
+
+\subsection{Self-Healing}
+Self-healing refers to a network's ability to automatically detect, diagnose, and fix errors without human intervention. To reliably identify such errors in 6G networks, AI-based detection methods are used. These include:
+
+\begin{itemize}
+    \item \textbf{Deep Learning:} 
+        Deep learning models continuously analyze data such as latency, packet loss rates, connection interruptions, and energy consumption and detect unusual patterns early on (Q3). 
+
+    \item \textbf{Reinforcement Learning:} 
+    Reinforcement Learning: Federated Learning algorithms can be applied to support cell outage compensation. By training and simulating different scenarios for network cells, the system can learn which actions (e.g.,  resetting a cell, rerouting traffic, or reducing data load)  are most effective in each situation to "heal" the affected cell and maintain QoS.
+    
+    \item \textbf{Swarm intelligence:} 
+    Swarm intelligence is used to reduce the impact of a cell failure so that it does not affect QoS for the user. If a cell fails, neighboring cells can collectively decide how to take over the traffic so that user connections remain stable.
+    
+\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Including of specific files and 
+% proper text of the document, respectively
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%& \input{text/examples}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Include references
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
+
+\end{document}

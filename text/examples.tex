@@ -1,0 +1,91 @@
+\section{Introduction}
+\newtheorem{theorem}{Theorem}
+
+\blindtext \cite{IEEEtran}
+\blindtext
+
+\subsection{Table in paper}
+\blindtext
+
+
+\begin{table}[!thb]
+\caption{Amazing table}
+\centering
+\begin{tabular}{lrrr} 
+\toprule
+Example table\\  
+\midrule 
+Column 1 & Column 2 & Column 3 & Column 4 	\\ 
+\midrule 
+Row 1	&	2	&	12,75	&	42	\\
+Row 2	&	6	&	8,20	&	43	\\
+Row 3	&	14	&	10,00	&	41	\\	 
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Additionally IEEE-template-examples}
+\blindtext
+\begin{theorem}[Lorenz-Langmann]
+This theorem had a funny assumption, which is here not described in more detail.
+In the following the proof is described with one examples for the multi-row IEEE Equationarray environment:
+\begin{IEEEproof}[Proof]
+The proof is trivial. And rather it is none.
+\begin{IEEEeqnarray}{rCl}
+a	& = 	& b + c				\\
+	& = 	& d + e + f + g + h
+	+ i + j + k \nonumber		\\
+	&		& +\> l + m + n + o		\\
+	& = 	& p + q + r + s
+\end{IEEEeqnarray}
+\end{IEEEproof}
+\end{theorem}
+
+%Example for figure with two columns
+
+\begin{figure*}[!t]
+\centering
+\subfloat[Case I]{\includegraphics[width=2.5in]{IEEE_Logo}
+\label{fig_first_case}}
+\hfil
+\subfloat[Case II]{\includegraphics[width=2.5in]{IEEE_Logo}
+\label{fig_second_case}}
+\caption{Figure with two graphics distributed over two columns}
+\label{fig_sim}
+\end{figure*}
+
+
+\subsubsection{Some text}
+\blindtext
+
+
+%Here again we have a \begin{table*} environment distributed over two columns!
+
+\begin{table*}[!bt]
+\caption{Amazing table with two columns with automatically column width, but far to little content}
+\begin{tabularx}{1.0\textwidth}{XXXXXXXXX} \addlinespace \addlinespace \toprule 
+%addlinespace is responsible for regular Vbox
+Example table\\ 
+ \midrule 
+Column 1 & Column 2 & Column 3 & Column 4 	&	A	&	B	&	C	&	D	&	E		\\ 
+\midrule 
+Row 1	&	2	&	12,75	&	42	&	2	&	12,75	&	445645452	&	T T T	&	12,75	\\
+Row 2	&	6	&	8,20	&	43	&	2	&	12,75	&	4456452	&	I J K	&	12,75		\\
+Row 3	&	14	&	10,00	&	41	&	2	&	12,75	&	23242	&	M L N	&	12,75		\\	 
+\bottomrule 
+\end{tabularx}
+\end{table*}
+
+\subsection{Additionally text with references}
+\Blindtext \blindtext \blindtext
+\cite{Guenes+:2008TR}
+\Blindtext
+
+\begin{figure}[!htpb]
+\centering
+\includegraphics[width=0.8\columnwidth]{IEEE_Logo}
+\caption{A common figure.}
+\label{fig_sim2}
+\end{figure}
+
+\Blindtext
